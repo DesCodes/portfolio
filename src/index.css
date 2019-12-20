@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, rgba(68,95,189,1) 0%, rgba(78,78,221,1) 17%, rgba(0,212,255,1) 100%);}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+	color: #272341;
+  font-size: 4rem;
+}
+
+h1 span {
+	color: #2fb6dff7;
+}
+
+#aboutSection, #projectSection {
+  /*padding: 150px 0;*/
+}
+
+/*#aboutSection {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}*/
+
+.aboutSection {
+  display: grid;
+  grid-template-areas: 1fr 1fr 1fr 1fr;
+}
+
+.aboutSection h2 {
+  color: #f6fffe;
+  font-size: 2.5rem;
+}
+
+.aboutSection p {
+  color: #f6fffe;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+.aboutImg {
+  width: 275px;
+  height: 275px;
+}
+
+#projectSection {
+-webkit-clip-path: polygon(0 20%, 100% 3%, 100% 100%, 0% 100%);
+clip-path: polygon(0 20%, 100% 3%, 100% 100%, 0% 100%);
+padding: 300px 0;
+margin-top: 50px;
+}
+
+.projectSection h2 {
+  color: #272341;
+  font-size: 2.5rem;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 150px 150px;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: left;
+}
+
+.projectCard p, .projectCard h3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.projectCard a {
+  grid-row-start: 3;
+}
+
+.projectCard a:last-child {
+  grid-column-start: 2;
+}
+
+.projectCard img {
+  grid-column-start: 4;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.projectSection h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.projectSection button {
+  border: 2.5px solid #2fb6dff7;
+  padding: 7px;
+  color: #2fb6dff7;
+  font-weight: bold;
+  background: #f6fffe;
+}
