@@ -7,12 +7,18 @@ const About = () => {
 		<div id='aboutSection'
 		className=' 
 			aboutSection
-			tc vh-50 ma4
+			tc vh-50
 		'>
 			<h2>About</h2>
 			<div className='flex justify-center'>
-				<img className='aboutImg fl pa2' src={profile} alt='developer profile' />
-				<p className=''>I'm a problem solver that builds fully responsive websites from templates</p>
+				<figure>
+					<img className='aboutImg fl' src={profile} alt='developer profile' />
+				</figure>
+				<div>
+					<p>
+						I'm a problem solver that builds fully responsive websites from templates
+					</p>
+				</div>
 			</div>
 			<Icons />
 		</div>

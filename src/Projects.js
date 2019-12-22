@@ -9,7 +9,6 @@ const Projects = ({ projectInfo }) => {
 		className='
 			projectSection
 			tc
-			bg-washed-blue { background-color: var(--washed-green)
 		'>
 		<h2>Projects</h2>
 			{

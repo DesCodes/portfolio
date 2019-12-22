@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header.js';
 import About from './About.js';
 import Projects from './Projects.js';
+import Contact from './Contacts.js';
 import { projectInfo } from './projectInfo.js';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
       <About />
 
       <Projects projectInfo={ projectInfo } />
+
+      <Contact />
     </div>
   );
 }
