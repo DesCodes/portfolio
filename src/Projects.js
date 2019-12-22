@@ -18,10 +18,17 @@ const Projects = ({ projectInfo }) => {
 						<div className='projectCard'>
 							<h3>{projectInfo[i].projectName}</h3>
 							<p>{projectInfo[i].projectDescription}</p>
+								<br />
 								<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
-									<button>See Live</button>
+									<button className='mw4 h2 pa0'>
+										See Live
+									</button>
 								</a>
-							<a href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>Source Code</a>
+							<a href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
+								<button className='mw4 h2 pa0'>
+									Source Code
+								</button>
+							</a>
 							<img src={projectInfo[i].projectImg} alt="project preview" />
 						</div>
 					);

@@ -21,6 +21,8 @@ h1 span {
 	color: #2fb6dff7;
 }
 
+
+/*About section*/
 #aboutSection, #projectSection {
   /*padding: 150px 0;*/
 }
@@ -44,6 +46,7 @@ h1 span {
   color: #f6fffe;
   font-size: 1.75rem;
   font-style: italic;
+  margin: 0;
 }
 
 .aboutImg {
@@ -51,6 +54,35 @@ h1 span {
   height: 275px;
 }
 
+
+
+/*Icons section*/
+.icons {
+  font-size: 3.5rem;
+ /* display: flex;
+  justify-content: center;*/
+}
+
+.icons svg {
+   padding: 20px;
+   margin: 10px;
+   border: 1px solid black;
+   border-radius: 50%;
+
+   /*background: black;*/
+}
+
+.icons svg:nth-child(1), .icons svg:nth-child(2) {
+  padding: 20px 26px;
+}
+
+.icons svg:nth-child(3), .icons svg:nth-child(5) {
+  padding: 20px 23px;
+}
+
+
+
+/*Project section*/
 #projectSection {
 -webkit-clip-path: polygon(0 20%, 100% 3%, 100% 100%, 0% 100%);
 clip-path: polygon(0 20%, 100% 3%, 100% 100%, 0% 100%);
@@ -79,11 +111,22 @@ margin-top: 50px;
 }
 
 .projectCard a {
-  grid-row-start: 3;
+  /*grid-row-start: 3;*/
+  display: contents;
 }
 
 .projectCard a:last-child {
   grid-column-start: 2;
+}
+
+.projectCard a, .projectCard button {
+  text-decoration: none;
+}
+
+.projectCard a:hover, .projectCard button:hover {
+  cursor: pointer;
+  background: #272341;
+  color: #2fb6dff7;
 }
 
 .projectCard img {
@@ -100,8 +143,9 @@ margin-top: 50px;
 
 .projectSection button {
   border: 2.5px solid #2fb6dff7;
-  padding: 7px;
   color: #2fb6dff7;
   font-weight: bold;
   background: #f6fffe;
+  max-width: content;
+  max-height: content;
 }

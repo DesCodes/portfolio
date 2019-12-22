@@ -1,5 +1,6 @@
 import React from 'react';
 import profile from './assests/profile.png';
+import Icons from './Icons.js';
 
 const About = () => {
 	return (
@@ -13,6 +14,7 @@ const About = () => {
 				<img className='aboutImg fl pa2' src={profile} alt='developer profile' />
 				<p className=''>I'm a problem solver that builds fully responsive websites from templates</p>
 			</div>
+			<Icons />
 		</div>
 	);
 }
