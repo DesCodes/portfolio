@@ -26,6 +26,16 @@ img {
   box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
 }
 
+/*Header section*/
+.headerSection {
+  height: 100vh;
+  margin-top: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 /*About section*/
 #aboutSection, #projectSection {
@@ -44,8 +54,14 @@ img {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
   margin: 0 auto;
-  padding-bottom: 40rem;
+  padding-bottom: 15rem;
+}
+
+.aboutSection .container {
+  display: flex;
 }
 
 .aboutSection h2 {
@@ -64,6 +80,7 @@ img {
 .aboutImg {
   width: 250px;
   /*height: 275px;*/
+  border-radius: 5px;
 }
 
 
@@ -80,8 +97,9 @@ img {
    margin: 10px;
    border: 1px solid black;
    border-radius: 50%;
-
-   /*background: black;*/
+   background: #fff;
+   width: 50px;
+   height: 50px;
 }
 
 .icons svg:nth-child(1), .icons svg:nth-child(2) {
@@ -98,13 +116,18 @@ img {
 #projectSection {
 /*-webkit-clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
 clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);*/
-padding: 25px 0;
+/*padding: 25px 0;*/
 /*margin-top: 50px;*/
+}
+
+.projectSection {
+
 }
 
 .projectSection h2 {
   color: #272341;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .projectCard {
@@ -113,7 +136,7 @@ padding: 25px 0;
   grid-template-rows: 50px 150px 150px;
   max-width: 75%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 65px;
   text-align: left;
 }
 
@@ -122,9 +145,18 @@ padding: 25px 0;
   grid-column-end: 3;
 }
 
-.projectCard a {
-  /*grid-row-start: 3;*/
-  display: contents;
+.projectCard .seeLiveLink, .projectCard .souceCodeLink {
+  grid-row-start: 3;
+  /*grid-column-start: 1;*/
+  /*display: contents;*/
+}
+
+.projectCard .sourceCodeLink {
+  grid-column-start: 2;
+}
+
+.projectCard button {
+  padding: .4rem;
 }
 
 .projectCard a:last-child {
@@ -133,13 +165,25 @@ padding: 25px 0;
 
 .projectCard a, .projectCard button {
   text-decoration: none;
+  width: fit-content;
+  height: fit-content;
 }
 
-.projectCard a:hover, .projectCard button:hover {
+.projectCard button:hover {
   cursor: pointer;
   background: #2fb6dff7;
   color: #fff;
   transition: all 0.3s ease-in-out;
+}
+
+.projectCard figure {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  grid-column-start: 4;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .projectCard img {
@@ -147,6 +191,7 @@ padding: 25px 0;
   grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 4;
+  max-width: 100%;
 }
 
 .projectSection h3 {
@@ -170,7 +215,28 @@ padding: 25px 0;
 .contactSection {
   -webkit-clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
-  padding: 300px 0;
   margin-top: 50px;
+  padding: 5rem;
   background: rgba(68,95,189,1);
+}
+
+.contactSection h2 {
+  color: #f6fffe;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  height: 25vh;
+}
+
+.contactSection .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSection p {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #f6fffe;
+  /*text-align: center;*/
 }

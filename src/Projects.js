@@ -6,10 +6,7 @@ import React from 'react';
 const Projects = ({ projectInfo }) => {
 	return (
 		<div id='projectSection'
-		className='
-			projectSection
-			tc
-		'>
+		className='projectSection'>
 		<h2>Projects</h2>
 			{
 				projectInfo.map((project, i) => {
@@ -18,17 +15,21 @@ const Projects = ({ projectInfo }) => {
 							<h3>{projectInfo[i].projectName}</h3>
 							<p>{projectInfo[i].projectDescription}</p>
 								<br />
-								<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
-									<button className='mw4 h2 pa0'>
+								<a className='seeLiveLink' href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
+									<button>
 										See Live
 									</button>
 								</a>
-							<a href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
-								<button className='mw4 h2 pa0'>
+							<a className='souceCodeLink' href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
+								<button>
 									Source Code
 								</button>
 							</a>
-							<img src={projectInfo[i].projectImg} alt="project preview" />
+							<figure>
+								<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
+									<img src={projectInfo[i].projectImg} alt="project preview" />
+								</a>
+							</figure>
 						</div>
 					);
 				})
