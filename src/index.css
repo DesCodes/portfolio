@@ -88,27 +88,79 @@ img {
 /*Icons section*/
 .icons {
   font-size: 3.5rem;
- /* display: flex;
-  justify-content: center;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  /*justify-content: center;*/
 }
 
 .icons svg {
-   padding: 20px;
-   margin: 10px;
-   border: 1px solid black;
-   border-radius: 50%;
-   background: #fff;
-   width: 50px;
-   height: 50px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /*padding: 24px;*/
+  /*margin: 10px;*/
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  /*background: #fff;*/
+  width: 50px;
+  height: 50px;
 }
 
-.icons svg:nth-child(1), .icons svg:nth-child(2) {
+/*.icons svg:nth-child(1), .icons svg:nth-child(2) {
   padding: 20px 26px;
 }
 
 .icons svg:nth-child(3), .icons svg:nth-child(5) {
   padding: 20px 23px;
+}*/
+
+
+/*pie chart icons*/
+.pie {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }
+
+.innerCircle {
+  width: 80px;
+  height: 80px;
+  background: rgba(68,95,189,1);
+  border-radius: 50%;
+  position: absolute;
+  top: 5.5%;
+  left: 6%;
+  right: 5.5%;
+  bottom: 5.5%;
+}
+
+.triangle90 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid rgba(68,95,189,1);
+  position: absolute;   
+  bottom: 50%;
+  left: 33%;
+  transform: rotate(25.5deg);
+}
+
+.triangle80 {
+  border-left: 25px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 50px solid rgba(68,95,189,1);
+  position: absolute;   
+  bottom: 50%;
+  left: 33%;
+  transform: rotate(25.5deg);
+}
+
 
 
 
