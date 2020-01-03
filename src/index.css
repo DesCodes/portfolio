@@ -13,17 +13,35 @@ code {
     monospace;
 }
 
+
+
+/*general shared css attributes*/
+h2 {
+  text-align: center;
+}
+
 h1 {
 	color: #272341;
   font-size: 4rem;
+  padding: 20px;
 }
 
 h1 span {
 	color: #2fb6dff7;
 }
 
+p {
+  font-family: sans-serif;
+}
+
 img {
   box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /*Header section*/
@@ -42,26 +60,27 @@ img {
   /*padding: 150px 0;*/
 }
 
-/*#aboutSection {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}*/
-
 .aboutSection {
   /*display: grid;*/
   /*grid-template-areas: 1fr 1fr 1fr 1fr;*/
   background: rgba(68,95,189,1);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   align-items: center;
   /*justify-content: center;*/
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+  /*height: 70vh;*/
+  padding: 20px;
   padding-bottom: 15rem;
 }
 
 .aboutSection .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
 }
 
 .aboutSection h2 {
@@ -90,7 +109,7 @@ img {
   font-size: 3.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  /*grid-gap: 10px;*/
   /*justify-content: center;*/
 }
 
@@ -127,6 +146,7 @@ img {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .innerCircle {
@@ -182,10 +202,18 @@ clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);*/
   text-align: center;
 }
 
+.projectSection h3 {
+  font-weight: 600;
+}
+
+.projectSection p {
+  font-size: 1.15rem;
+}
+
 .projectCard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 150px 150px;
+  grid-template-rows: 50px 200px 150px;
   max-width: 75%;
   margin: 0 auto;
   padding: 65px;
@@ -208,7 +236,8 @@ clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);*/
 }
 
 .projectCard button {
-  padding: .4rem;
+  padding: .65rem;
+  border-radius: 5px;
 }
 
 .projectCard a:last-child {
@@ -276,19 +305,68 @@ clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);*/
   color: #f6fffe;
   font-size: 2.5rem;
   text-align: center;
-  margin: 0 auto;
-  height: 25vh;
+  /*margin: 0 auto;*/
 }
 
 .contactSection .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .contactSection p {
-  margin: 0;
+  /*margin: 0;*/
   font-size: 1.75rem;
   color: #f6fffe;
   /*text-align: center;*/
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem 0;
+  max-width: 500px;
+  width: -webkit-fill-available;
+}
+
+.contact label {
+  overflow: hidden;
+}
+
+textarea {
+  height: 5rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+}
+
+button[type=submit] {
+  width: 100px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0.5rem 0.5rem 0.9rem rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+input[type=name], label[for=name] {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+input[type=email], label[for=email] {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+textarea, label[for=message] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
 }

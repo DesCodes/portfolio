@@ -5,35 +5,36 @@ import React from 'react';
 
 const Projects = ({ projectInfo }) => {
 	return (
-		<div id='projectSection'
-		className='projectSection'>
-		<h2>Projects</h2>
-			{
-				projectInfo.map((project, i) => {
-					return (
-						<div className='projectCard'>
-							<h3>{projectInfo[i].projectName}</h3>
-							<p>{projectInfo[i].projectDescription}</p>
-								<br />
-								<a className='seeLiveLink' href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
+		<div id='projectSection'className='projectSection'>
+			<div className=''>
+				<h2>Projects</h2>
+				{
+					projectInfo.map((project, i) => {
+						return (
+							<div className='projectCard'>
+								<h3>{projectInfo[i].projectName}</h3>
+								<p>{projectInfo[i].projectDescription}</p>
+									<br />
+									<a className='seeLiveLink' href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
+										<button>
+											See Live
+										</button>
+									</a>
+								<a className='souceCodeLink' href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
 									<button>
-										See Live
+										Source Code
 									</button>
 								</a>
-							<a className='souceCodeLink' href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
-								<button>
-									Source Code
-								</button>
-							</a>
-							<figure>
-								<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
-									<img src={projectInfo[i].projectImg} alt="project preview" />
-								</a>
-							</figure>
-						</div>
-					);
-				})
-			}
+								<figure>
+									<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
+										<img src={projectInfo[i].projectImg} alt="project preview" />
+									</a>
+								</figure>
+							</div>
+						);
+					})
+				}
+			</div>
 		</div>
 	);
 }
