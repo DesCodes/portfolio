@@ -6,18 +6,20 @@ import Projects from './Projects.js';
 import Contact from './Contacts.js';
 import { projectInfo } from './projectInfo.js';
 
-function App() {
-  return (
-    <div>
-      <Header />
 
-      <About />
+const App = () => {
+	return (
+			<div>
+	      <Header />
 
-      <Projects projectInfo={ projectInfo } />
+	      <About />
 
-      <Contact />
-    </div>
-  );
+	      <Projects projectInfo={ projectInfo } />
+
+	      <Contact />
+	    </div>
+	)
 }
+
 
 export default App;

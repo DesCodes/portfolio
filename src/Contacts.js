@@ -10,14 +10,14 @@ const Contact = () => {
 						Feel free to drop me a message.
 					</p>
 					<form method='POST' action='https://submit-form.com/FIoJCv9P4I5-GjBhuPlog'>
-						<label for='name'>Name</label>
-						<input type='name' name='userName' required='true' placeholder='Name' />
+						<label htmlFor='name'>Name</label>
+						<input type='name' name='userName' required={true} placeholder='Name' />
 
-						<label for='email'>Email</label>
-						<input type='email' name='userEmail' label='email' required='true' placeholder='Email' />
+						<label htmlFor='email'>Email</label>
+						<input type='email' name='userEmail' label='email' required={true} placeholder='Email' />
 
-						<label for='message'>Message</label>
-						<textarea placeholder='Message' name='userMessage' required='true' />
+						<label htmlFor='message'>Message</label>
+						<textarea placeholder='Message' name='userMessage' required={true} />
 
 						<button type='submit'>Submit</button>
 					</form>

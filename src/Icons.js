@@ -4,13 +4,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import ProgressBar from './ProgressBar.js';
-import {Utils} from './isScrolledIntoView.js';
  
 library.add(fab, far)
 
 const Icons = () => {
 	return (
-		<div className='icons'>
+		<div id='icons' className='icons'>
 			<div className='container'>
 				<FontAwesomeIcon className='html5' icon={['fab', 'html5']} />
 				<ProgressBar strokeDasharray='340' strokeDashoffset='96' />

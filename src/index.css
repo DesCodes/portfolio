@@ -111,6 +111,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   /*grid-gap: 10px;*/
   /*justify-content: center;*/
+  transition: 500ms linear;
 }
 
 .icons svg {
@@ -139,6 +140,7 @@ img {
 .progressBar {
   animation-duration: 1.4s;
   animation-name: progressBar;
+  stroke-width: 5;
 }
 
 @keyframes progressBar {

@@ -11,7 +11,7 @@ const Projects = ({ projectInfo }) => {
 				{
 					projectInfo.map((project, i) => {
 						return (
-							<div className='projectCard'>
+							<div key={i} className='projectCard'>
 								<h3>{projectInfo[i].projectName}</h3>
 								<p>{projectInfo[i].projectDescription}</p>
 									<br />
