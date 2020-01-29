@@ -1,6 +1,6 @@
 import React from 'react';
 import profile from './assests/profile.png';
-// import Icons from './Icons.js';
+import Icons from './Icons.js';
 import ProgressBarAnimation from './ProgessBarAnimation.js';
 
 const About = () => {
@@ -18,7 +18,9 @@ const About = () => {
 						</p>
 					</div>
 				</div>
-				<ProgressBarAnimation />
+				<ProgressBarAnimation>
+					<Icons />
+				</ProgressBarAnimation>
 			</div>
 		</div>
 	);

@@ -1,39 +1,16 @@
 import React from 'react';
-// import simpleRestaurant from './assests/simple restaurant.png';
-// import restaurantLocator from './assests/restaurant locator.png';
-// import robofriends from './assests/robofriends app.png';
+import { projectInfo } from './projectInfo.js';
+import ProjectCard from './ProjectCard.js';
+import ProjectCardAnimation from './ProjectCardAnimation.js';
 
-const Projects = ({ projectInfo }) => {
+const Projects = () => {
 	return (
 		<div id='projectSection'className='projectSection'>
-			<div className=''>
+			<div>
 				<h2>Projects</h2>
-				{
-					projectInfo.map((project, i) => {
-						return (
-							<div key={i} className='projectCard'>
-								<h3>{projectInfo[i].projectName}</h3>
-								<p>{projectInfo[i].projectDescription}</p>
-									<br />
-									<a className='seeLiveLink' href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
-										<button>
-											See Live
-										</button>
-									</a>
-								<a className='souceCodeLink' href={projectInfo[i].sourceCode} rel="noopener noreferrer" target='_blank'>
-									<button>
-										Source Code
-									</button>
-								</a>
-								<figure>
-									<a href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
-										<img src={projectInfo[i].projectImg} alt="project preview" />
-									</a>
-								</figure>
-							</div>
-						);
-					})
-				}
+				<ProjectCardAnimation id='projectContent'>
+					<ProjectCard projectInfo={ projectInfo } />
+				</ProjectCardAnimation>	
 			</div>
 		</div>
 	);
