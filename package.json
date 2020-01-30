@@ -1,8 +1,8 @@
 {
+  "homepage": "https://descodes.github.io/portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://descodes.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
