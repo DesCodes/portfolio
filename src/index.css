@@ -234,23 +234,24 @@ img {
   grid-column-start: 4;
   grid-column-end: 8;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 5;
+  overflow: hidden;
+  position: relative;
 }
 
 figure a {
   position: relative;
 }
 
-figure .imgOverlayText {
+figure p.imgOverlayText {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
-  margin: auto;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 3rem;
   color: #272341;
   font-weight: 600;
-  
+  z-index: -1;
 }
 
 .projectCard img {
@@ -261,8 +262,22 @@ figure .imgOverlayText {
   max-width: 100%;
 }
 
-.projectCard img:hover {
+.projectCard img:hover,
+.projectCard img:focus {
   opacity: 0.5;
+  transition: 1000ms;
+  transform: scale(1.2);
+}
+
+.projectCard img {
+  opacity: 1;
+  transition: 1000ms;
+  transform: scale(1.02);
+}
+
+.projectCard figure:hover,
+.projectCard figure:focus {
+  overflow: hidden;
 }
 
 .projectSection h3 {
@@ -365,8 +380,86 @@ textarea, label[for=message] {
 }
 
 
+@media screen and (max-width: 1200px) {
+  /*About Section*/
+  #aboutSection {
+    height: 165vh;
+  }
 
-@media only screen and (max-width: 600px) {
+  .aboutSection .container {
+    margin: 0;
+  }
+
+  .aboutSection p {
+    padding: 2.5rem;
+  }
+
+  .aboutSection .content-container {
+    padding: 30px;
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .icons .container {
+    margin: 10px;
+  }
+
+  /*Project Section*/
+  .projectCard {
+    max-width: 100%;
+    padding: 1.75rem;
+    grid-template-rows: none;
+    grid-gap: 10px;
+  }
+
+  .projectCard h3 {
+    grid-row-start: 1;
+  }
+
+  .projectCard figure {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .projectCard p {
+    grid-row-start: 3;
+  }
+
+  figure p.imgOverlayText {
+    font-size: 2rem;
+  }
+
+  .projectCard .seeLiveLink, 
+  .projectCard .souceCodeLink {
+    grid-row-start: 4;
+  }
+
+/*  .projectCard .seeLiveLink:first-child,
+  .projectCard .sourceCodeLink:first-child {
+    grid-row-start: 5;
+  }*/
+
+  .projectCard .sourceCodeLink {
+    grid-column-start: 2;
+  }
+
+
+  /*Contact Section*/
+  .contactSection {
+    padding: 1rem;
+  }
+  .contactSection p {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
   .wrapper {
     width: 100%;
   }
@@ -432,6 +525,10 @@ textarea, label[for=message] {
 
   .projectCard p {
     grid-row-start: 3;
+  }
+
+  figure p.imgOverlayText {
+    font-size: 2rem;
   }
 
   .projectCard .seeLiveLink, 
