@@ -241,6 +241,7 @@ img {
 
 figure a {
   position: relative;
+  display: flex;
 }
 
 figure p.imgOverlayText {
@@ -379,11 +380,17 @@ textarea, label[for=message] {
   grid-row-start: 2;
 }
 
+@media screen and (max-width: 2000px) {
+  /*About Section*/
+  #aboutSection {
+    height: 145vh;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   /*About Section*/
   #aboutSection {
-    height: 165vh;
+    height: 140vh;
   }
 
   .aboutSection .container {
@@ -458,6 +465,12 @@ textarea, label[for=message] {
   }
 }
 
+@media screen and (max-width: 700px) {
+  /*About Section*/
+  #aboutSection {
+    height: 150vh;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .wrapper {

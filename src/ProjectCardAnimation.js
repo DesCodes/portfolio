@@ -20,7 +20,11 @@ class ProjectCardAnimation extends React.Component {
   }
   render() {
     return (
-      <div className="content-container" id='projectContent' onScroll={this.handleScroll}>
+      <div 
+      	className="content-container" 
+      	id='projectContent' 
+      	onScroll={this.handleScroll}
+    	>
         <ProjectCard projectInfo={projectInfo} />
       </div>
     )

@@ -21,8 +21,8 @@ const ProjectCard = ({ projectInfo }) => {
 					<figure>
 						<a className='hoverElement' href={projectInfo[i].projectLive} rel="noopener noreferrer" target='_blank'>
 							<img src={projectInfo[i].projectImg} alt="project preview" />
+							<p className='imgOverlayText'>View Live!</p>
 						</a>
-						<p className='imgOverlayText'>View Live!</p>
 					</figure>
 				</div>
 			);

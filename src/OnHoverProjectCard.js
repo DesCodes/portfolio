@@ -1,17 +1,18 @@
 import React from 'react';
 
 
-class OnHover extends react.Component {
+class OnMouseOver extends react.Component {
 	componentDidMount() {
-		window.addEventListener('hover', this.handleHover)
+		window.addEventListener('mouseover', this.handleMouseOver)
 	}
 
-	handleHover() {
+	handleMouseOver() {
 		const element = getElementsByClassName('hoverElement');
 		const overlayText = getElementsByClassName('imgOverlayText');
 
 		
+		
 	}
 }
 
-export default OnHover;
+export default OnMouseOver;
