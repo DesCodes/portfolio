@@ -14,7 +14,7 @@ const About = () => {
 					</figure>
 					<div>
 						<p>
-							I'm an ambitious problem solver that builds fully responsive websites from templates
+							I'm an ambitious problem solver that builds fully responsive websites from templates and loves being part of a team.
 						</p>
 					</div>
 				</div>
